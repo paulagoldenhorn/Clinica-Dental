@@ -1,0 +1,14 @@
+LOGGER:
+Exito, {Entidad} {accion}
+
+Error, {ATRIBUTO} ya registrado
+Error, {ATRIBUTO} del {Entidad} debe ser nulo
+Error, {ATRIBUTO} del {Entidad} no debe ser nulo
+Error, {Entidad} inexistente
+
+EXCEPTIONS:
+{Entidad} ya registrado en la base de datos
+{ATRIBUTO} ya registrado en la base de datos
+
+El {Entidad} no existe
+{Entidad} con {ATRIBUTO} + atributo + no existe

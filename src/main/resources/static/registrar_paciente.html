@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Registrar Paciente</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="js/registrar_paciente.js"></script>
+    <script src="js/normalizar_datos.js"></script>
+  </head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="/index.html">Goldental</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Menú
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/registrar_odontologo.html">Registrar Odontólogo</a>
+            <a class="dropdown-item" href="/dashboard_odontologo.html">Listado de Odontólogos</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/registrar_paciente.html">Registrar Paciente</a>
+            <a class="dropdown-item" href="/dashboard_paciente.html">Listado de Pacientes</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/registrar_turno.html">Registrar Turno</a>
+            <a class="dropdown-item" href="/dashboard_turno.html">Listado de Turnos</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <button type="button" class="btn btn-light btn-sm" onclick="location.replace('/logout')">SALIR</button>
+  </nav>
+
+    <!-- FORMULARIO -->
+    <form class="container" id="registrar_paciente">
+      <h3>Registrar paciente</h3>
+      <br>
+      <div class="mb-3">
+        <div class="row">
+          <div class="col">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="nombre" name="nombre" required>
+          </div>
+          <div class="col">
+            <label for="apellido" class="form-label">Apellido</label>
+            <input type="text" class="form-control" id="apellido" name="apellido" required>
+          </div>
+          <div class="col">
+            <label for="email" class="form-label">Correo</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+          </div>
+        </div>
+        
+        <br>
+
+        <div class="row">
+          <div class="col">
+            <label for="dni" class="form-label">DNI</label>
+            <input type="text" class="form-control" id="dni" name="dni" required>
+          </div>
+          <div class="col">
+            <label for="ingreso" class="form-label">Fecha de ingreso</label>
+            <input type="date" class="form-control" id="ingreso" name="ingreso" required>
+          </div>
+        </div> 
+        
+        <br>
+        <br>
+
+        <h4>Domicilio</h4>
+        <br>
+        <div class="row">
+          <div class="col">
+            <label for="calle" class="form-label">Calle</label>
+            <input type="text" class="form-control" id="calle" name="calle" required>
+          </div>
+          <div class="col">
+            <label for="numero" class="form-label">Número</label>
+            <input type="text" class="form-control" id="numero" name="numero" required>
+          </div>
+        </div>
+
+        <br>
+
+        <div class="row">
+          <div class="col">
+            <label for="localidad" class="form-label">Localidad</label>
+            <input type="text" class="form-control" id="localidad" name="localidad" required>
+          </div>
+          <div class="col">
+            <label for="provincia" class="form-label">Provincia</label>
+            <input type="text" class="form-control" id="provincia" name="provincia" required>
+          </div>
+        </div>
+     
+        <br>
+
+        <button class="btn btn-info btn-lg btn-block" type="submit" id="btn-registrar-paciente">Registrar</button>
+        
+        <div id="response" style="display:none; margin-top:10px"></div>
+      </div>
+    </form>  
+  </div>
+</body>
+</html>

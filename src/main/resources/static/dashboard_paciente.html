@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Pacientes</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="js/dashboard_paciente.js" defer></script>
+    <script src="js/eliminar_paciente.js" defer></script>
+    <script src="js/actualizar_paciente.js" defer></script>
+    <script src="js/normalizar_datos.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="/index.html">Goldental</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Menú
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/registrar_odontologo.html">Registrar Odontólogo</a>
+            <a class="dropdown-item" href="/dashboard_odontologo.html">Listado de Odontólogos</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/registrar_paciente.html">Registrar Paciente</a>
+            <a class="dropdown-item" href="/dashboard_paciente.html">Listado de Pacientes</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/registrar_turno.html">Registrar Turno</a>
+            <a class="dropdown-item" href="/dashboard_turno.html">Listado de Turnos</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <button type="button" class="btn btn-light btn-sm" onclick="location.replace('/logout')">SALIR</button>
+  </nav>
+
+  <main>
+    <form id="form_actualizar_paciente">
+      
+    </form>
+    
+    <h3>Listado de Pacientes</h3>
+    <a class="btn btn-info btn-sm" href="/registrar_paciente.html" role="button">Registrar Paciente</a>
+    <br><br>
+      <table class="table table-striped">
+          <thead>
+              <tr>
+                <th scope="col">DNI</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Apellido</th>
+                <th scope="col">Correo</th>
+                <th scope="col">Ingreso</th>
+                <th scope="col">Calle</th>
+                <th scope="col">Número</th>
+                <th scope="col">Localidad</th>
+                <th scope="col">Provincia</th>
+                <th scope="col"><span class="text-muted">Acciones</span></th>
+              </tr>
+            </thead>
+            <tbody id="container-dashboard">
+
+            </tbody>
+      </table>
+    </main>
+  </div>
+
+</body>
+</html>
